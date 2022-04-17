@@ -1,0 +1,28 @@
+@import 'variables';
+
+@mixin btn-secondary($color) {
+  background-color: $color;
+  border-color: $color;
+  color: #fff;
+}
+
+@mixin btn-primary($color) {
+  background-color: $color;
+  border-color: $color;
+  color: #fff;
+}
+
+@mixin btn-info($color) {
+  background-color: $color;
+  border-color: $color;
+}
+
+@mixin bg-primary($color) {
+  --bs-bg-opacity: 1;
+  background-color: $color !important;
+}
+
+@mixin bg-secondary($color) {
+  --bs-bg-opacity: 1;
+  background-color: $color !important;
+}

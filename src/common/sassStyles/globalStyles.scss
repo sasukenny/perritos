@@ -1,0 +1,169 @@
+@import 'variables';
+@import 'mixins';
+
+html,
+body {
+  height: 100%;
+  margin: 0px;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.75em;
+  }
+  h4 {
+    font-size: 1.5em;
+  }
+  h5 {
+    font-size: 1.25em;
+  }
+  h6 {
+    font-size: 1.15em;
+  }
+  .btn {
+    border-radius: 4px;
+    transition: all ease-in-out 200ms;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .theme-default {
+    .bg-primary {
+      @include bg-primary($primary);
+    }
+    .bg-secondary {
+      @include bg-secondary($secondary);
+    }
+    .btn-secondary {
+      @include btn-secondary($secondary);
+    }
+    .btn-primary {
+      @include btn-primary($primary);
+    }
+  }
+  .theme-first {
+    .bg-primary {
+      @include bg-primary($f-primary);
+    }
+    .bg-secondary {
+      @include bg-secondary($f-secondary);
+    }
+    .btn-secondary {
+      @include btn-secondary($f-secondary);
+    }
+    .btn-primary {
+      @include btn-primary($f-primary);
+    }
+  }
+  .theme-second {
+    .bg-primary {
+      @include bg-primary($s-primary);
+    }
+    .bg-secondary {
+      @include bg-secondary($s-secondary);
+    }
+    .btn-secondary {
+      @include btn-secondary($s-secondary);
+    }
+    .btn-primary {
+      @include btn-primary($s-primary);
+    }
+  }
+  .theme-third {
+    .bg-primary {
+      @include bg-primary($t-primary);
+    }
+    .bg-secondary {
+      @include bg-secondary($t-secondary);
+    }
+    .btn-secondary {
+      @include btn-secondary($t-secondary);
+    }
+    .btn-primary {
+      @include btn-primary($t-primary);
+    }
+  }
+  .cursor-size-1 {
+    cursor: url('./sassIcons/cursor2.png'), auto;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    textarea,
+    input[type='text'],
+    input[type='number'],
+    input[type='email'],
+    input[type='password'] {
+      cursor: url('./sassIcons/bar2.png') 14 14, text;
+    }
+
+    a,
+    select,
+    .btn,
+    .btn p,
+    .dropdown-item,
+    .list-group-item,
+    .Toastify__toast,
+    input[type='file'],
+    input[type='time'],
+    input[type='datetime-local'] {
+      cursor: url('./sassIcons/pointer2.png') 14 3, pointer;
+    }
+
+    label,
+    option {
+      cursor: url('./sassIcons/cursor2.png'), auto;
+    }
+  }
+  .cursor-size-2 {
+    cursor: url('./sassIcons/cursor3.png'), auto;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    textarea,
+    input[type='text'],
+    input[type='number'],
+    input[type='email'],
+    input[type='password'] {
+      cursor: url('./sassIcons/bar3.png') 14 16, text;
+    }
+    a,
+    select,
+    .btn,
+    .btn p,
+    .dropdown-item,
+    .list-group-item,
+    .Toastify__toast,
+    input[type='file'],
+    input[type='time'],
+    input[type='datetime-local'] {
+      cursor: url('./sassIcons/pointer3.png') 14 3, pointer;
+    }
+
+    label {
+      cursor: url('./sassIcons/cursor3.png'), auto;
+    }
+  }
+}
+
+#content {
+  display: flex;
+  flex: 1;
+}

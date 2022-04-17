@@ -1,0 +1,18 @@
+@import '../../common/sassStyles/_variables';
+
+.title {
+  border-bottom: 4px solid $darkGray;
+}
+
+.block-title {
+  background-color: $primary;
+  margin: 0;
+  padding: 10px;
+  border-radius: 5px;
+  h2 {
+    color: $white;
+    margin: 0;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+}
