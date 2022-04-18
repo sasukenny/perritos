@@ -9,7 +9,7 @@ const AdminPerritos = () => {
   const navigate = useNavigate();
   useEffect(() => {
     (async () => {
-      const response = await fetch(`http://127.0.0.1:8001/api/perritos`)
+      const response = await fetch(`http://44.203.226.109:8001/api/perritos`)
         .then((data) => data.json())
         .then((data1) => {
           setPerritos(data1);
@@ -50,7 +50,7 @@ const AdminPerritos = () => {
                       <td>{perrito.owner}</td>
                       <td>
                         <img
-                          src={'http://127.0.0.1:8001' + perrito.picture}
+                          src={'http://44.203.226.109:8001' + perrito.picture}
                           alt="Card image cap"
                           width="100px"
                         />

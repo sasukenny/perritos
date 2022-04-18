@@ -10,7 +10,7 @@ const MisPerritos = () => {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        `http://127.0.0.1:8001/api/perritos/${user.id}`
+        `http://44.203.226.109:8001/api/perritos/${user.id}`
       )
         .then((data) => data.json())
         .then((data1) => {
@@ -30,7 +30,7 @@ const MisPerritos = () => {
             <CardPerrito
               name={p.name}
               id={p.id}
-              image={'http://127.0.0.1:8001' + p.picture}
+              image={'http://44.203.226.109:8001' + p.picture}
             />
           ))}
         </div>

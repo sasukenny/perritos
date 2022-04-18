@@ -10,7 +10,9 @@ const VerReporte = () => {
   const [reporte, setReporte] = useState<Reporte>(initialReporteData);
   useEffect(() => {
     (async () => {
-      const response = await fetch(`http://127.0.0.1:8001/api/reportes/${cita}`)
+      const response = await fetch(
+        `http://44.203.226.109:8001/api/reportes/${cita}`
+      )
         .then((data) => data.json())
         .then((data1) => {
           setReporte(data1);
@@ -19,11 +21,11 @@ const VerReporte = () => {
   }, []);
   console.log(reporte);
   let rutaRayosX: string | null = reporte.ray_x_file
-    ? `http://127.0.0.1:8001/${reporte.ray_x_file}`
+    ? `http://44.203.226.109:8001/${reporte.ray_x_file}`
     : null;
 
   let bloodTest: string | null = reporte.blood_test_file
-    ? `http://127.0.0.1:8001/${reporte.blood_test_file}`
+    ? `http://44.203.226.109:8001/${reporte.blood_test_file}`
     : null;
   return (
     <Wrapper>

@@ -24,7 +24,7 @@ const RegistrarPerrito = () => {
       form.append(key, value);
     }
     console.log(form);
-    await fetch(`http://127.0.0.1:8001/api/perritos`, {
+    await fetch(`http://44.203.226.109:8001/api/perritos`, {
       method: 'POST',
       body: form,
     });
