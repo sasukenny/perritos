@@ -26,7 +26,7 @@ const RegistrarReporte = () => {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        `http://44.203.226.109:8001/api/servicioscontratados/${citaId}`
+        `http://3.216.133.207:8001/api/servicioscontratados/${citaId}`
       )
         .then((data) => data.json())
         .then((data1) => {
@@ -43,14 +43,14 @@ const RegistrarReporte = () => {
       form.append(key, value);
     }
     console.log(form);
-    await fetch(`http://44.203.226.109:8001/api/reportes`, {
+    await fetch(`http://3.216.133.207:8001/api/reportes`, {
       method: 'POST',
       body: form,
     });
     let cambiodeData = servicios_contratados;
     cambiodeData.status = 'realizado';
     await fetch(
-      `http://44.203.226.109:8001/api/servicioscontratados/${citaId}`,
+      `http://3.216.133.207:8001/api/servicioscontratados/${citaId}`,
       {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },

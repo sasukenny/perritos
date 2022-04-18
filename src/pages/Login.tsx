@@ -22,7 +22,7 @@ const Login = () => {
     }
   });
   const handleSubmit = async (data: LoginData) => {
-    await fetch(`http://44.203.226.109:8000/api/login/`, {
+    await fetch(`http://3.216.133.207:8000/api/login/`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),

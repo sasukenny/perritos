@@ -13,7 +13,7 @@ const ServicioDetalles = () => {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        `http://44.203.226.109:8001/api/servicios/${servicioId}`
+        `http://3.216.133.207:8001/api/servicios/${servicioId}`
       )
         .then((data) => data.json())
         .then((data1) => {
@@ -43,7 +43,7 @@ const ServicioDetalles = () => {
               <div className="col-5">
                 <img
                   className="card-img-top"
-                  src={'http://44.203.226.109:8001' + servicio.picture}
+                  src={'http://3.216.133.207:8001' + servicio.picture}
                   alt="Card image cap"
                 />
                 <div>

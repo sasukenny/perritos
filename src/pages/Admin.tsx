@@ -10,7 +10,7 @@ const Admin = () => {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        `http://44.203.226.109:8001/api/servicioscontratados`
+        `http://3.216.133.207:8001/api/servicioscontratados`
       )
         .then((data) => data.json())
         .then((data1) => {

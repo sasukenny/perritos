@@ -21,7 +21,7 @@ const AgendarCita = () => {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        `http://44.203.226.109:8001/api/perritos/${user.id}`
+        `http://3.216.133.207:8001/api/perritos/${user.id}`
       )
         .then((data) => data.json())
         .then((data1) => {
@@ -31,7 +31,7 @@ const AgendarCita = () => {
   }, []);
   useEffect(() => {
     (async () => {
-      const response = await fetch(`http://44.203.226.109:8001/api/servicios`)
+      const response = await fetch(`http://3.216.133.207:8001/api/servicios`)
         .then((data) => data.json())
         .then((data1) => {
           setServicios(data1);
@@ -50,7 +50,7 @@ const AgendarCita = () => {
   const handleSubmit = async (data: Cita) => {
     data.date_created = '2022-09-01';
     data.status = 'solicitado';
-    await fetch(`http://44.203.226.109:8001/api/servicioscontratados`, {
+    await fetch(`http://3.216.133.207:8001/api/servicioscontratados`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),

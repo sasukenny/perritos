@@ -7,7 +7,7 @@ const Servicios = () => {
   const [servicios, setServicios] = useState([]);
   useEffect(() => {
     (async () => {
-      const response = await fetch('http://44.203.226.109:8001/api/servicios')
+      const response = await fetch('http://3.216.133.207:8001/api/servicios')
         .then((data) => data.json())
         .then((data1) => {
           setServicios(data1);
@@ -25,7 +25,7 @@ const Servicios = () => {
             {servicios.map((s: Services) => (
               <SimpleCard
                 title={s.name}
-                imagen={'http://44.203.226.109:8001' + s.picture}
+                imagen={'http://3.216.133.207:8001' + s.picture}
                 description={s.description}
                 ruta={`${s.id}`}
                 precio={s.price}

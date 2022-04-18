@@ -11,7 +11,7 @@ const PerritoDetalle = () => {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        `http://44.203.226.109:8001/api/perritosservicioscontratados/${perritoId}`
+        `http://3.216.133.207:8001/api/perritosservicioscontratados/${perritoId}`
       )
         .then((data) => data.json())
         .then((data1) => {

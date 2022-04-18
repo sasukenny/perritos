@@ -23,7 +23,7 @@ const Register = () => {
   });
   const handleSubmit = async (data: NewUser) => {
     if (data.cpassword === data.password) {
-      await fetch(`http://44.203.226.109:8000/api/register/`, {
+      await fetch(`http://3.216.133.207:8000/api/register/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
